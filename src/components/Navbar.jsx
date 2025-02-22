@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div>
       <Container className="border-b-2 border-gray-300 flex items-center">
-        <div className="py-8 flex max-w-[250px] justify-between items-center border-r-2 border-gray-300">
+        <div className="py-8 flex w-[250px] justify-between items-center border-r-2 border-gray-300">
           <div className="flex gap-2.5">
             <Image src={logo} />
             <Image src={logoText} />
@@ -35,7 +35,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-6 mr-[100px]">
+        <div className="flex items-center gap-6 mr-[50px]">
           <LuCalendarDays className="size-6 text-[#767676]" />
           <TbMessage2Question className="size-6 text-[#767676]" />
           <IoNotificationsOutline className="size-6 text-[#767676]" />
