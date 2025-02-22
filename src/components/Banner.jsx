@@ -1,13 +1,18 @@
+import React, { useState } from "react";
 import Image from "./layer/Image";
 import pen from "../assets/pen.png";
 import link from "../assets/link.png";
-import React, { useState } from "react";
-
+import message from "../assets/message.svg";
+import p1 from "../assets/p1.jpg";
+import p2 from "../assets/p2.jpg";
+import p3 from "../assets/p3.jpg";
+import d1 from "../assets/d1.png";
 // react icons
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { FiMessageCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { InlineWidget } from "react-calendly";
+
 const Banner = () => {
   const [isProfileHovered, setIsProfileHovered] = useState(false);
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -123,43 +128,43 @@ const Banner = () => {
 
       <div className="flex items-center justify-between mt-10 mb-12">
         <div className="flex items-center gap-5">
-        <select className="outline-none text-[#AAAAAA] py-3 flex justify-start bg-transparent w-[122px] border border-[#787486] rounded-md">
-          <option className="">
-            <span className="py-4">Filter</span>
-          </option>
-          <option className="">
-            <span className="py-4"></span>
-          </option>
-          <option className="">
-            <span className="py-4">1 person</span>
-          </option>
-          <option className="">
-            <span className="py-4">2 person</span>
-          </option>
-          <option className="">
-            <span className="py-4">3 person</span>
-          </option>
-        </select>
+          <select className="outline-none text-[#AAAAAA] py-3 flex justify-start bg-transparent w-[122px] border border-[#787486] rounded-md">
+            <option className="">
+              <span className="py-4">Filter</span>
+            </option>
+            <option className="">
+              <span className="py-4"></span>
+            </option>
+            <option className="">
+              <span className="py-4">1 person</span>
+            </option>
+            <option className="">
+              <span className="py-4">2 person</span>
+            </option>
+            <option className="">
+              <span className="py-4">3 person</span>
+            </option>
+          </select>
 
-        <div
-          className="w-[122px] border border-[#787486] rounded-md relative cursor-pointer"
-          onClick={() => setIsCalendlyOpen(!isCalendlyOpen)}
-          onBlur={() => setIsCalendlyOpen(false)} // Close dropdown when clicking outside
-        >
-          <p className="py-3 text-[#AAAAAA] text-center">Today</p>
+          <div
+            className="w-[122px] border border-[#787486] rounded-md relative cursor-pointer"
+            onClick={() => setIsCalendlyOpen(!isCalendlyOpen)}
+            onBlur={() => setIsCalendlyOpen(false)} // Close dropdown when clicking outside
+          >
+            <p className="py-3 text-[#AAAAAA] text-center">Today</p>
 
-          {isCalendlyOpen && (
-            <div
-              className="w-[1000px] absolute left-[-100px]"
-              onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside
-            >
-              <InlineWidget
-                url="https://calendly.com/piyash2003b/30min?month=2025-02"
-                styles={{ height: "800px" }}
-              />
-            </div>
-          )}
-        </div>
+            {isCalendlyOpen && (
+              <div
+                className="w-[1000px] absolute left-[-100px]"
+                onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside
+              >
+                <InlineWidget
+                  url="https://calendly.com/piyash2003b/30min?month=2025-02"
+                  styles={{ height: "800px" }}
+                />
+              </div>
+            )}
+          </div>
         </div>
 
         <div>
@@ -192,6 +197,687 @@ const Banner = () => {
             <p className="text-[#787486]">Share</p>
           </div>
         </div>
+      </div>
+
+      <div className="grid grid-cols-3 justify-between gap-11">
+        <div className="w-[354px] bg-[#F5F5F5]">
+          <div className=" w-[314px] ml-12 mt-7">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3.5 cursor-pointer mb-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <circle cx="4" cy="4" r="4" fill="#5030E5" />
+                </svg>
+                <p className="text-[#0d062d] font-medium mb6">To Do</p>
+                <p className="size-5 rounded-lg text-[#625F6D] bg-[#E0E0E0] flex items-center justify-center">
+                  4
+                </p>
+              </div>
+              <svg
+                className="mb-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  opacity="0.2"
+                  d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
+                  fill="#5030E5"
+                />
+                <path
+                  d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z"
+                  fill="#5030E5"
+                />
+              </svg>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="314"
+              height="4"
+              viewBox="0 0 314 4"
+              fill="none"
+            >
+              <path d="M0 2H314" stroke="#5030E5" stroke-width="3" />
+            </svg>
+
+            <div className="w-[314px] bg-white rounded-2xl mt-7">
+              <div className="flex items-center justify-between ml-5 pt-5">
+                <div className="px-2 py-1.5 bg-[#DFA87433] flex items-center justify-center rounded">
+                  <p className="text-[#D58D49] text-xs font-medium text-center">
+                    Low
+                  </p>
+                </div>
+                <p className="mr-5">•••</p>
+              </div>
+
+              <h1 className="text-[#0D062D] text-lg font ml-5 mt-1">
+                Brainstorming
+              </h1>
+              <p className="ml-5 w-[274px] text-[#787486] text-xs">
+                Brainstorming brings team members' diverse experience into play.{" "}
+              </p>
+
+              <div className="ml-5 flex items-center mt-7 pb-5 relative">
+                <div className="size-6 rounded-3xl">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[20px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[40px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+
+                <div className="ml-[82px] flex items-center gap-1.5">
+                  <Image className="size-4" src={message} />
+                  <p className="text-xs font-medium text-[#787486]">
+                    12 comments
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-1.5 ml-[14px]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.3334 7.33334V11.3333C14.3334 14 13.6667 14.6667 11.0001 14.6667H4.33341C1.66674 14.6667 1.00008 14 1.00008 11.3333V4.66667C1.00008 2 1.66674 1.33334 4.33341 1.33334H5.33341C6.33341 1.33334 6.55341 1.62667 6.93341 2.13334L7.93341 3.46667C8.18674 3.8 8.33341 4 9.00008 4H11.0001C13.6667 4 14.3334 4.66667 14.3334 7.33334Z"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M5.33333 1.33334H11.3333C12.6667 1.33334 13.3333 2 13.3333 3.33334V4.25334"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p className="text-xs font-medium text-[#787486]">0 files</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className=" w-[314px] ml-12">
+            <div className="w-[314px] bg-white rounded-2xl mt-7">
+              <div className="flex items-center justify-between ml-5 pt-5">
+                <div className="px-2 py-1.5 bg-[#DFA87433] flex items-center justify-center rounded">
+                  <p className="text-[#D58D49] text-xs font-medium text-center">
+                    Low
+                  </p>
+                </div>
+                <p className="mr-5">•••</p>
+              </div>
+
+              <h1 className="text-[#0D062D] text-lg font ml-5 mt-1">
+                Brainstorming
+              </h1>
+              <p className="ml-5 w-[274px] text-[#787486] text-xs">
+                Brainstorming brings team members' diverse experience into play.{" "}
+              </p>
+
+              <div className="ml-5 flex items-center mt-7 pb-5 relative">
+                <div className="size-6 rounded-3xl">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[20px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[40px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+
+                <div className="ml-[82px] flex items-center gap-1.5">
+                  <Image className="size-4" src={message} />
+                  <p className="text-xs font-medium text-[#787486]">
+                    12 comments
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-1.5 ml-[14px]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.3334 7.33334V11.3333C14.3334 14 13.6667 14.6667 11.0001 14.6667H4.33341C1.66674 14.6667 1.00008 14 1.00008 11.3333V4.66667C1.00008 2 1.66674 1.33334 4.33341 1.33334H5.33341C6.33341 1.33334 6.55341 1.62667 6.93341 2.13334L7.93341 3.46667C8.18674 3.8 8.33341 4 9.00008 4H11.0001C13.6667 4 14.3334 4.66667 14.3334 7.33334Z"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M5.33333 1.33334H11.3333C12.6667 1.33334 13.3333 2 13.3333 3.33334V4.25334"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p className="text-xs font-medium text-[#787486]">0 files</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className=" w-[314px] ml-12">
+            <div className="w-[314px] bg-white rounded-2xl mt-7">
+              <div className="flex items-center justify-between ml-5 pt-5">
+                <div className="px-2 py-1.5 bg-[#DFA87433] flex items-center justify-center rounded">
+                  <p className="text-[#D58D49] text-xs font-medium text-center">
+                    Low
+                  </p>
+                </div>
+                <p className="mr-5">•••</p>
+              </div>
+
+              <h1 className="text-[#0D062D] text-lg font ml-5 mt-1">
+                Brainstorming
+              </h1>
+              <p className="ml-5 w-[274px] text-[#787486] text-xs">
+                Brainstorming brings team members' diverse experience into play.{" "}
+              </p>
+
+              <div className="ml-5 flex items-center mt-7 pb-5 relative">
+                <div className="size-6 rounded-3xl">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[20px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[40px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+
+                <div className="ml-[82px] flex items-center gap-1.5">
+                  <Image className="size-4" src={message} />
+                  <p className="text-xs font-medium text-[#787486]">
+                    12 comments
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-1.5 ml-[14px]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.3334 7.33334V11.3333C14.3334 14 13.6667 14.6667 11.0001 14.6667H4.33341C1.66674 14.6667 1.00008 14 1.00008 11.3333V4.66667C1.00008 2 1.66674 1.33334 4.33341 1.33334H5.33341C6.33341 1.33334 6.55341 1.62667 6.93341 2.13334L7.93341 3.46667C8.18674 3.8 8.33341 4 9.00008 4H11.0001C13.6667 4 14.3334 4.66667 14.3334 7.33334Z"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M5.33333 1.33334H11.3333C12.6667 1.33334 13.3333 2 13.3333 3.33334V4.25334"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p className="text-xs font-medium text-[#787486]">0 files</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className=" w-[314px] ml-12">
+            <div className="w-[314px] bg-white rounded-2xl mt-7">
+              <div className="flex items-center justify-between ml-5 pt-5">
+                <div className="px-2 py-1.5 bg-[#DFA87433] flex items-center justify-center rounded">
+                  <p className="text-[#D58D49] text-xs font-medium text-center">
+                    Low
+                  </p>
+                </div>
+                <p className="mr-5">•••</p>
+              </div>
+
+              <h1 className="text-[#0D062D] text-lg font ml-5 mt-1">
+                Brainstorming
+              </h1>
+              <p className="ml-5 w-[274px] text-[#787486] text-xs">
+                Brainstorming brings team members' diverse experience into play.{" "}
+              </p>
+
+              <div className="ml-5 flex items-center mt-7 pb-5 relative">
+                <div className="size-6 rounded-3xl">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[20px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[40px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+
+                <div className="ml-[82px] flex items-center gap-1.5">
+                  <Image className="size-4" src={message} />
+                  <p className="text-xs font-medium text-[#787486]">
+                    12 comments
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-1.5 ml-[14px]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.3334 7.33334V11.3333C14.3334 14 13.6667 14.6667 11.0001 14.6667H4.33341C1.66674 14.6667 1.00008 14 1.00008 11.3333V4.66667C1.00008 2 1.66674 1.33334 4.33341 1.33334H5.33341C6.33341 1.33334 6.55341 1.62667 6.93341 2.13334L7.93341 3.46667C8.18674 3.8 8.33341 4 9.00008 4H11.0001C13.6667 4 14.3334 4.66667 14.3334 7.33334Z"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M5.33333 1.33334H11.3333C12.6667 1.33334 13.3333 2 13.3333 3.33334V4.25334"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p className="text-xs font-medium text-[#787486]">0 files</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-[354px] bg-[#F5F5F5]">
+          <div>
+            <div className="flex items-center justify-between ml-5">
+              <div className="flex items-center gap-3.5 cursor-pointer ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <circle cx="4" cy="4" r="4" fill="#FFA500" />
+                </svg>
+                <p className="text-[#0d062d] font-medium mt-5 mb-6">
+                  On Progress
+                </p>
+                <p className="size-5 rounded-lg text-[#625F6D] bg-[#E0E0E0] flex items-center justify-center">
+                  3
+                </p>
+              </div>
+            </div>
+            <svg
+              className="mx-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              width="314"
+              height="4"
+              viewBox="0 0 314 4"
+              fill="none"
+            >
+              <path d="M0 2H314" stroke="#FFA500" stroke-width="3" />
+            </svg>
+          </div>
+
+          <div className="w-[314px] bg-white rounded-2xl mt-7 mx-auto">
+            <div className="flex items-center justify-between ml-5 pt-5">
+              <div className="px-2 py-1.5 bg-[#DFA87433] flex items-center justify-center rounded">
+                <p className="text-[#D58D49] text-xs font-medium text-center">
+                  Low
+                </p>
+              </div>
+              <p className="mr-5">•••</p>
+            </div>
+
+            <h1 className="text-[#0D062D] text-lg font ml-5 mt-1">
+              Onboarding Illustrations
+            </h1>
+
+            <Image src={p1} />
+
+            <div className="ml-5 flex items-center mt-7 pb-5 relative">
+              <div className="size-6 rounded-3xl">
+                <Image
+                  className="rounded-3xl"
+                  src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                />
+              </div>
+              <div className="size-6 rounded-3xl absolute left-[20px]">
+                <Image
+                  className="rounded-3xl"
+                  src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                />
+              </div>
+              <div className="size-6 rounded-3xl absolute left-[40px]">
+                <Image
+                  className="rounded-3xl"
+                  src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                />
+              </div>
+
+              <div className="ml-[82px] flex items-center gap-1.5">
+                <Image className="size-4" src={message} />
+                <p className="text-xs font-medium text-[#787486]">
+                  12 comments
+                </p>
+              </div>
+
+              <div className="flex items-center gap-1.5 ml-[14px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14.3334 7.33334V11.3333C14.3334 14 13.6667 14.6667 11.0001 14.6667H4.33341C1.66674 14.6667 1.00008 14 1.00008 11.3333V4.66667C1.00008 2 1.66674 1.33334 4.33341 1.33334H5.33341C6.33341 1.33334 6.55341 1.62667 6.93341 2.13334L7.93341 3.46667C8.18674 3.8 8.33341 4 9.00008 4H11.0001C13.6667 4 14.3334 4.66667 14.3334 7.33334Z"
+                    stroke="#787486"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M5.33333 1.33334H11.3333C12.6667 1.33334 13.3333 2 13.3333 3.33334V4.25334"
+                    stroke="#787486"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p className="text-xs font-medium text-[#787486]">0 files</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-[314px] bg-white rounded-2xl mt-7 mx-auto">
+            <div className="flex items-center justify-between ml-5 pt-5">
+              <div className="px-2 py-1.5 bg-[#DFA87433] flex items-center justify-center rounded">
+                <p className="text-[#D58D49] text-xs font-medium text-center">
+                  Low
+                </p>
+              </div>
+              <p className="mr-5">•••</p>
+            </div>
+
+            <h1 className="text-[#0D062D] text-lg font ml-5 mt-1">
+              Onboarding Illustrations
+            </h1>
+
+            <div className="flex gap-2 items-center justify-center">
+              <Image src={p2} />
+              <Image src={p3} />
+            </div>
+
+            <div className="ml-5 flex items-center mt-7 pb-5 relative">
+              <div className="size-6 rounded-3xl">
+                <Image
+                  className="rounded-3xl"
+                  src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                />
+              </div>
+
+              <div className="ml-[82px] flex items-center gap-1.5">
+                <Image className="size-4" src={message} />
+                <p className="text-xs font-medium text-[#787486]">
+                  14 comments
+                </p>
+              </div>
+
+              <div className="flex items-center gap-1.5 ml-[14px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14.3334 7.33334V11.3333C14.3334 14 13.6667 14.6667 11.0001 14.6667H4.33341C1.66674 14.6667 1.00008 14 1.00008 11.3333V4.66667C1.00008 2 1.66674 1.33334 4.33341 1.33334H5.33341C6.33341 1.33334 6.55341 1.62667 6.93341 2.13334L7.93341 3.46667C8.18674 3.8 8.33341 4 9.00008 4H11.0001C13.6667 4 14.3334 4.66667 14.3334 7.33334Z"
+                    stroke="#787486"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M5.33333 1.33334H11.3333C12.6667 1.33334 13.3333 2 13.3333 3.33334V4.25334"
+                    stroke="#787486"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p className="text-xs font-medium text-[#787486]">15 files</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+        <div className="w-[354px] bg-[#F5F5F5]">
+
+          <div>
+            
+            <div className="flex items-center justify-between ml-5">
+              <div className="flex items-center gap-3.5 cursor-pointer ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <circle cx="4" cy="4" r="4" fill="#76A5EA" />
+                </svg>
+                <p className="text-[#0d062d] font-medium mt-5 mb-6">Done</p>
+                <p className="size-5 rounded-lg text-[#625F6D] bg-[#E0E0E0] flex items-center justify-center">
+                  2
+                </p>
+              </div>
+            </div>
+            <svg
+              className="mx-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              width="314"
+              height="4"
+              viewBox="0 0 314 4"
+              fill="none"
+            >
+              <path d="M0 2H314" stroke="#8BC48A" stroke-width="3" />
+            </svg>
+          </div>
+
+
+          <div className="mt-7 mx-auto w-[314px] bg-white rounded-2xl">
+
+          <div className="flex items-center justify-between ml-5 pt-5">
+              <div className="px-2 py-1.5 bg-[#83C29D33] flex items-center justify-center rounded">
+                <p className="text-[#68B266] text-xs font-medium text-center">
+                Completed
+                </p>
+              </div>
+              <p className="mr-5">•••</p>
+            </div>
+            
+          <h1 className="text-[#0D062D] text-lg font ml-5 mt-1">
+              Onboarding Illustrations
+            </h1>
+
+            <Image className="mx-auto" src={d1} />
+
+            <div className="ml-5 flex items-center mt-7 pb-5 relative">
+              <div className="size-6 rounded-3xl">
+                <Image
+                  className="rounded-3xl"
+                  src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                />
+              </div>
+              <div className="size-6 rounded-3xl absolute left-[20px]">
+                <Image
+                  className="rounded-3xl"
+                  src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                />
+              </div>
+              
+
+              <div className="ml-[82px] flex items-center gap-1.5">
+                <Image className="size-4" src={message} />
+                <p className="text-xs font-medium text-[#787486]">
+                  12 comments
+                </p>
+              </div>
+
+              <div className="flex items-center gap-1.5 ml-[14px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14.3334 7.33334V11.3333C14.3334 14 13.6667 14.6667 11.0001 14.6667H4.33341C1.66674 14.6667 1.00008 14 1.00008 11.3333V4.66667C1.00008 2 1.66674 1.33334 4.33341 1.33334H5.33341C6.33341 1.33334 6.55341 1.62667 6.93341 2.13334L7.93341 3.46667C8.18674 3.8 8.33341 4 9.00008 4H11.0001C13.6667 4 14.3334 4.66667 14.3334 7.33334Z"
+                    stroke="#787486"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    d="M5.33333 1.33334H11.3333C12.6667 1.33334 13.3333 2 13.3333 3.33334V4.25334"
+                    stroke="#787486"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p className="text-xs font-medium text-[#787486]">15 files</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div className=" w-[314px] mx-auto">
+            <div className="w-[314px] bg-white rounded-2xl mt-7">
+            <div className="flex items-center justify-between ml-5 pt-5">
+              <div className="px-2 py-1.5 bg-[#83C29D33] flex items-center justify-center rounded">
+                <p className="text-[#68B266] text-xs font-medium text-center">
+                Completed
+                </p>
+              </div>
+              <p className="mr-5">•••</p>
+            </div>
+
+              <h1 className="text-[#0D062D] text-lg font ml-5 mt-1">
+                Design System
+              </h1>
+              <p className="ml-5 w-[274px] text-[#787486] text-xs">
+                 It just needs to adapt the UI from what you did before 
+              </p>
+
+              <div className="ml-5 flex items-center mt-7 pb-5 relative">
+                <div className="size-6 rounded-3xl">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[20px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+                <div className="size-6 rounded-3xl absolute left-[40px]">
+                  <Image
+                    className="rounded-3xl"
+                    src="https://ik.imagekit.io/abpj7jifz/IMG_2809.jpg?updatedAt=1739538435692"
+                  />
+                </div>
+
+                <div className="ml-[82px] flex items-center gap-1.5">
+                  <Image className="size-4" src={message} />
+                  <p className="text-xs font-medium text-[#787486]">
+                    12 comments
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-1.5 ml-[14px]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.3334 7.33334V11.3333C14.3334 14 13.6667 14.6667 11.0001 14.6667H4.33341C1.66674 14.6667 1.00008 14 1.00008 11.3333V4.66667C1.00008 2 1.66674 1.33334 4.33341 1.33334H5.33341C6.33341 1.33334 6.55341 1.62667 6.93341 2.13334L7.93341 3.46667C8.18674 3.8 8.33341 4 9.00008 4H11.0001C13.6667 4 14.3334 4.66667 14.3334 7.33334Z"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M5.33333 1.33334H11.3333C12.6667 1.33334 13.3333 2 13.3333 3.33334V4.25334"
+                      stroke="#787486"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p className="text-xs font-medium text-[#787486]">15 files</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
       </div>
     </div>
   );
