@@ -155,7 +155,7 @@ const Banner = () => {
 
             {isCalendlyOpen && (
               <div
-                className="w-[1000px] absolute left-[-100px]"
+                className="w-[1000px] absolute left-[-100px] z-50"
                 onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside
               >
                 <InlineWidget
